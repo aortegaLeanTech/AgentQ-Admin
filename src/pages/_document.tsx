@@ -1,16 +1,14 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+// Import React para compatibilidad
 import React from 'react';
 
-export default class MyDocument extends Document {
-  render() {
-    return (
-      <Html lang="en">
-        <Head />
-        <body>
-          <Main />
-          <NextScript />
-        </body>
-      </Html>
-    );
-  }
+// Se utiliza un enfoque más simple compatible con Next.js 15
+export default function Document() {
+  return (
+    <html lang="en">
+      <head />
+      <body>
+        <div id="__next"></div>
+      </body>
+    </html>
+  );
 }

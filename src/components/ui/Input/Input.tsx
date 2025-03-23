@@ -1,5 +1,6 @@
 import React from 'react';
-import { TextField, TextFieldProps } from '@mui/material';
+import TextField from '@mui/material/TextField';
+import { TextFieldProps } from '@mui/material/TextField';
 
 export interface InputProps extends Omit<TextFieldProps, 'variant'> {
   helper?: string;
