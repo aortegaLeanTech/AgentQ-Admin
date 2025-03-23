@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #FF4E00;
+  --color-primary-50: #FFF2EB;
+  --color-primary-100: #FFE5D7;
+  --color-primary-200: #FFD0B3;
+  --color-primary-300: #FFAC80;
+  --color-primary-400: #FF7D40;
+  --color-primary-500: #FF4E00;
+  --color-primary-600: #CC3E00;
+  --color-primary-700: #992F00;
+  --color-primary-800: #661F00;
+  --color-primary-900: #331000;
+
+  --color-secondary: #665EF3;
+  --color-secondary-50: #F2F1FE;
+  --color-secondary-100: #E4E3FD;
+  --color-secondary-200: #C9C7FB;
+  --color-secondary-300: #AFABF9;
+  --color-secondary-400: #948DF7;
+  --color-secondary-500: #7A70F5;
+  --color-secondary-600: #665EF3;
+  --color-secondary-700: #514BCF;
+  --color-secondary-800: #3D39AB;
+  --color-secondary-900: #292787;
+
+  --color-darkblue: #3B3A5C;
+  --color-darkblue-50: #ECECF0;
+  --color-darkblue-100: #D9D9E1;
+  --color-darkblue-200: #B4B3C3;
+  --color-darkblue-300: #8E8DA5;
+  --color-darkblue-400: #686786;
+  --color-darkblue-500: #4F4E6B;
+  --color-darkblue-600: #464568;
+  --color-darkblue-700: #3B3A5C;
+  --color-darkblue-800: #302F4A;
+  --color-darkblue-900: #242439;
+}
+
+/* Custom styles for better MUI + Tailwind integration */
+@layer components {
+  .mui-button-primary {
+    background-color: var(--color-primary);
+    color: white;
+  }
+  .mui-button-primary:hover {
+    background-color: var(--color-primary-600);
+  }
+  
+  .mui-button-secondary {
+    background-color: var(--color-secondary);
+    color: white;
+  }
+  .mui-button-secondary:hover {
+    background-color: var(--color-secondary-600);
+  }
+
+  .form-field {
+    margin-bottom: 1rem; /* mb-4 equivalent */
+  }
+}
+
+/* Dark mode adjustments */
+.dark .MuiPaper-root {
+  background-color: var(--color-darkblue-800);
+  color: white;
+}
+
+.dark .MuiAppBar-root {
+  background-color: var(--color-darkblue-900);
+}
+
+/* General theme customizations */
+.mui-shadow-sm {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.mui-rounded {
+  border-radius: 0.5rem;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}

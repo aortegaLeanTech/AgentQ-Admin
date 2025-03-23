@@ -1,0 +1,21 @@
+# bunfig.toml - Bun configuration
+
+[install]
+registry = "https://registry.npmjs.org/"
+frozen-lockfile = false
+hoist = true
+link = true
+peer = true
+dry-run = false
+force = false
+production = false
+
+[test]
+include = ["**/*.test.ts", "**/*.test.tsx", "**/*.spec.ts", "**/*.spec.tsx"]
+
+[run]
+basedir = "."
+env = { NODE_ENV = "development" }
+
+[install.cache]
+dir = ".bun-cache"

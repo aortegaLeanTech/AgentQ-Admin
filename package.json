@@ -1,0 +1,59 @@
+{
+  "name": "agentq-admin",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "jest"
+  },
+  "trustedDependencies": [
+    "@swc/*"
+  ],
+  "bun-create": {
+    "postinstall": "bun install"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.0",
+    "@floating-ui/react": "^0.26.6",
+    "@iconify/react": "^4.1.1",
+    "@mui/icons-material": "^5.15.12",
+    "@mui/material": "^5.15.12",
+    "@preact/signals-react": "^3.0.1",
+    "@tanstack/react-query": "^5.20.5",
+    "@tanstack/react-query-devtools": "^5.20.5",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "colord": "^2.9.3",
+    "next": "15.2.3",
+    "next-themes": "^0.2.1",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-hook-form": "^7.50.1",
+    "tailwind-merge": "^3.0.2",
+    "zustand": "^4.5.1"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4.0.14",
+    "@tailwindcss/typography": "^0.5.10",
+    "@testing-library/jest-dom": "^6.4.2",
+    "@testing-library/react": "^14.2.1",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9",
+    "eslint-config-next": "15.2.3",
+    "jsdom": "^24.0.0",
+    "tailwindcss": "^4.0.14",
+    "typescript": "^5",
+    "vitest": "^1.2.1"
+  },
+  "packageManager": "pnpm@9.15.1+sha512.1acb565e6193efbebda772702950469150cf12bcc764262e7587e71d19dc98a423dff9536e57ea44c49bdf790ff694e83c27be5faa23d67e0c033b583be4bfcf"
+}
