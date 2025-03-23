@@ -3,7 +3,7 @@ import React from 'react';
 import { ThemeProvider as MuiThemeProvider } from '@mui/material/styles';
 import { ThemeProvider as NextThemeProvider } from 'next-themes';
 import CssBaseline from '@mui/material/CssBaseline';
-import { muiTheme, muiDarkTheme } from '@/theme/muiTheme';
+import { muiTheme, muiDarkTheme } from './muiTheme';
 
 interface ThemeContextType {
   theme: string | undefined;

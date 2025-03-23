@@ -3,7 +3,6 @@ import "@/utils/react-polyfill";
 
 import { Geist, Geist_Mono } from "next/font/google";
 import React from "react";
-import { ThemeProvider } from "@/theme/ThemeProvider";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { queryClient } from "@/lib/react-query";
@@ -31,22 +30,17 @@ export default function App({ Component, pageProps }: AppProps) {
   // Verificar si la ruta actual es pública
   const isPublicRoute = publicRoutes.includes(router.pathname);
 
-  // Contenido principal con estilos de fuente
-  const mainContent = (
-    <div style={{ fontFamily: 'var(--font-geist-sans)', fontFeatureSettings: "'cv02', 'cv03', 'cv04', 'cv11'" }}>
-      {isPublicRoute ? (
-        // Rutas públicas no requieren autenticación
-        <Component {...pageProps} />
-      ) : (
-        // Rutas protegidas con AuthGuard
-        <AuthGuard children={<Component {...pageProps} />} />
-      )}
-    </div>
-  );
-
   return (
     <QueryClientProvider client={queryClient}>
-      <ThemeProvider children={mainContent} />
+      <div className={`${geistSans.variable} ${geistMono.variable}`}>
+        {isPublicRoute ? (
+          <Component {...pageProps} />
+        ) : (
+          <AuthGuard>
+            <Component {...pageProps} />
+          </AuthGuard>
+        )}
+      </div>
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   );
