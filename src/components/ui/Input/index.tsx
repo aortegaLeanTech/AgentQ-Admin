@@ -9,9 +9,9 @@
 
 'use client';
 
-import * as React from 'react';
+import React from 'react';
 import { TextField } from '@mui/material';
-// Importar el tipo correcto desde el mu00f3dulo especu00edfico
+// Importar el tipo correcto desde el módulo específico
 import type { TextFieldProps } from '@mui/material/TextField';
 
 // Interface para el componente de Input

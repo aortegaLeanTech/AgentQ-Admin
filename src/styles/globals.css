@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Variables CSS globales */
 
 :root {
   --color-primary: #FF4E00;
@@ -40,27 +38,25 @@
   --color-darkblue-900: #242439;
 }
 
-/* Custom styles for better MUI + Tailwind integration */
-@layer components {
-  .mui-button-primary {
-    background-color: var(--color-primary);
-    color: white;
-  }
-  .mui-button-primary:hover {
-    background-color: var(--color-primary-600);
-  }
-  
-  .mui-button-secondary {
-    background-color: var(--color-secondary);
-    color: white;
-  }
-  .mui-button-secondary:hover {
-    background-color: var(--color-secondary-600);
-  }
+/* Custom styles for MUI */
+.mui-button-primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+.mui-button-primary:hover {
+  background-color: var(--color-primary-600);
+}
 
-  .form-field {
-    margin-bottom: 1rem; /* mb-4 equivalent */
-  }
+.mui-button-secondary {
+  background-color: var(--color-secondary);
+  color: white;
+}
+.mui-button-secondary:hover {
+  background-color: var(--color-secondary-600);
+}
+
+.form-field {
+  margin-bottom: 1rem;
 }
 
 /* Dark mode adjustments */
