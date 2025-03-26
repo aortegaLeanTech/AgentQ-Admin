@@ -1,9 +1,11 @@
 'use client';
 
-import * as React from 'react';
+import React from 'react';
 import { ThemeProvider as MuiThemeProvider } from '@mui/material/styles';
 import { ThemeProvider as NextThemeProvider } from 'next-themes';
-import { ThemeMode, ThemeState } from './ThemeProvider';
+import { useThemeStore } from '@/store/useThemeStore';
+// Define the ThemeMode type locally since it's not exported
+type ThemeMode = 'light' | 'dark' | 'system';
 import { muiTheme, muiDarkTheme } from './muiTheme';
 
 // Definición del tipo para el contexto del tema
@@ -93,11 +95,7 @@ export const ClientThemeProvider: React.FC<ClientThemeProviderProps> = ({ childr
     setTheme(isDarkMode ? 'light' : 'dark');
   };
 
-  // Actualizar el estado global
-  ThemeState.isDarkMode = isDarkMode;
-  ThemeState.currentTheme = currentTheme;
-  ThemeState.setTheme = setTheme;
-  ThemeState.toggleTheme = toggleTheme;
+  // No need to update any global state as we're using React Context
 
   // Seleccionar el tema de Material UI
   const theme = isDarkMode ? muiDarkTheme : muiTheme;

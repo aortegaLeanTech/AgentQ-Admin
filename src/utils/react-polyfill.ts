@@ -5,7 +5,7 @@
 
 // Esta exportaciu00f3n garantiza que los mu00f3dulos que importan React directamente funcionen
 // con la versiu00f3n 18.3+ de React (pre-release de React 19)
-import * as React from 'react';
+import React from 'react';
 export default React;
 
 // Tambiu00e9n exportamos los hooks comu00fanmente utilizados para mayor comodidad
