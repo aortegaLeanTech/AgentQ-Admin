@@ -2,7 +2,7 @@
 import "@/utils/react-polyfill";
 
 import { Geist, Geist_Mono } from "next/font/google";
-import * as React from "react";
+import React from "react";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { queryClient } from "@/lib/react-query";

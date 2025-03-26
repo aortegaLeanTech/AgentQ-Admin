@@ -605,7 +605,6 @@ export default function Dashboard() {
                       sx={{
                         mr: 1,
                         minWidth: "auto",
-                        color: theme.textPrimary,
                         fontWeight: 600,
                         bgcolor: theme.primary,
                         color: "#fff",

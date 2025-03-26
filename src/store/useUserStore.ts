@@ -1,5 +1,6 @@
 import { create } from 'zustand';
 import { devtools, persist } from 'zustand/middleware';
+import { StateCreator } from 'zustand';
 import { User, SessionState, UserRole } from '@/types/user';
 
 interface UserStore extends SessionState {
@@ -14,7 +15,7 @@ interface UserStore extends SessionState {
 /**
  * Store de Zustand para manejar el estado de la sesión del usuario
  */
-export const useUserStore = create<UserStore>(
+export const useUserStore = create(
   devtools(
     persist(
       (set) => ({

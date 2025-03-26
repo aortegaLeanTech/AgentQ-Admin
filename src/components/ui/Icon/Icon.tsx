@@ -8,6 +8,7 @@ interface IconProps {
   height?: number | string;
   color?: string;
   onClick?: () => void;
+  style?: React.CSSProperties;
 }
 
 export const Icon = ({ 
