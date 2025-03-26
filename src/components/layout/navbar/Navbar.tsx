@@ -8,9 +8,9 @@ import {
   Divider,
   MenuItem,
   ListItemIcon,
-  Tooltip,
-  useTheme as useMuiTheme
+  Tooltip
 } from '@mui/material';
+import { useTheme as useMuiTheme } from '@mui/material/styles';
 import Badge from '@mui/material/Badge';
 import Avatar from '@mui/material/Avatar';
 import Menu from '@mui/material/Menu';
