@@ -10,5 +10,9 @@
     "files": [
       "static/chunks/_pages-dir-browser_node_modules_tanstack_query-devtools_build_DevtoolsPanelComponent_2QQPFIXG_js.js"
     ]
+  },
+  "theme/ThemeProvider.tsx -> @/theme/ThemeSwitcher": {
+    "id": "theme/ThemeProvider.tsx -> @/theme/ThemeSwitcher",
+    "files": []
   }
 }

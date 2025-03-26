@@ -1,5 +1,5 @@
-import React from 'react';
-import { useRouter } from 'next/router';
+import * as React from "react";
+import { useRouter } from "next/router";
 
 // Componente de redirecciu00f3n para /auth
 export default function AuthIndex() {
@@ -7,7 +7,7 @@ export default function AuthIndex() {
 
   React.useEffect(() => {
     // Redirigir a /auth/login cuando alguien accede a /auth
-    router.replace('/auth/login');
+    router.replace("/auth/login");
   }, [router]);
 
   // Mostrar una pantalla de carga o nada mientras se redirige

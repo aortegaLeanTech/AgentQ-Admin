@@ -17,12 +17,14 @@ export const LoginSidebar = () => {
         position: 'relative',
         display: 'flex',
         flexDirection: 'column',
-        height: '100%',
+        height: '100vh',
         width: '100%',
+        margin: 0,
+        padding: 0,
         overflow: 'hidden',
         background: 'linear-gradient(125deg, #0A2540 0%, #1565C0 65%, #0A47A9 100%)',
-        boxShadow: '0 8px 32px rgba(0, 0, 0, 0.2)',
-        borderRadius: 0, // Sin bordes redondeados en ningún tamaño de pantalla
+        boxShadow: 'none',
+        borderRadius: 0,
         transition: 'all 0.3s ease-in-out',
         '&::before': {
           content: '""',
@@ -63,7 +65,10 @@ export const LoginSidebar = () => {
           flexDirection: 'column',
           justifyContent: 'center',
           height: '100%',
-          px: { xs: 4, sm: 6, md: 8 }, // Responsive padding
+          width: '100%',
+          p: 0,
+          pl: { xs: 4, sm: 6, md: 8 }, // Solo padding izquierdo para alinear el texto
+          pr: { xs: 2, sm: 3, md: 4 }, // Pequeño padding derecho para balance
           color: 'white'
         }}
       >

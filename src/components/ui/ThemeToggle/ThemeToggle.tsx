@@ -1,14 +1,14 @@
 import React from 'react';
 import { IconButton, Tooltip } from '@mui/material';
 import { Icon } from '@/components/ui/Icon/Icon';
-import { useTheme } from '@/theme/ThemeProvider';
+import { useTheme } from '@/theme/ThemeSwitcher';
 
 interface ThemeToggleProps {
   className?: string;
 }
 
 export const ThemeToggle = ({ className = '' }: ThemeToggleProps) => {
-  const { isDark, toggleTheme } = useTheme();
+  const { isDarkMode: isDark, toggleTheme } = useTheme();
 
   return (
     <Tooltip title={isDark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'}>
